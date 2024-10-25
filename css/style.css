@@ -1,0 +1,113 @@
+body{
+    font-family: "Poppins", serif;
+    background-image: url("../img/concrete_seamless.jpg");
+    background-color: #f1f1f1;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+.nav_links{
+    display: flex;
+    flex-direction: column;
+
+}
+.nav-item a {
+    color: none;
+}
+.nav-item a:visited {
+    color: none;
+    text-decoration: none;
+}
+.card {
+    flex-basis: 450px;
+    border-radius: 50px 50px 0 0;
+}
+.card > header{
+    background-color: #288088;
+    border: solid 2px #45ADAD;
+    padding: 20px 0;
+    border-radius: 50px 50px 0 0;
+}
+.pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.gallery img {
+    width: 300px;
+    margin: 10px;
+    border: 10px solid #50C7C7;
+}
+@keyframes mymove {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+    to {
+        width: 475px;
+        opacity: 1;
+    }
+}
+#logo {
+    animation: mymove 5s ease-out forwards;
+}
+@media screen and (min-width: 900px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .nav_links {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .card {
+        flex-basis: 275px;
+    }
+    body > header {
+        position: sticky;
+        top: 0;
+    }
+}
+@media all and (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none;
+    }
+}
+@media print {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: none;
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .pricing {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .gallery {
+        display: none;
+    }
+    .card {
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+ .card ul li:first-child::after {
+        content: "\1F44D";
+    }
+}
